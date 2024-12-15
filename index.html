@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4hm0udX: Defend & Exploit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>M4hm0udX: Defend & Exploit</h1>
+        <p>Dare to explore the darkness...</p>
+        <!--Search Bar-->
+        <input type="text" id="search-bar" placeholder="Search for creepy content..." onkeyup="filterContent()">
+    </header>
+
+    <div class="container">
+        <!-- Content Blocks with Responsive Videos -->
+        <div class="box">
+            <img src="images/hunter.png" alt="Image 1">
+            <div class="content">
+                <h3>-------About Me-------</h3>
+                <p>Cybersecurity enthusiast, bug bounty hunter, digital forensics, and tech lover.</p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/PPFd39Dh-M8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/CyberDefenders_DanaBot.png" alt="Image 2">
+            <div class="content">
+                <h3>---DanaBot Lab WT---</h3>
+                <p>Welcome to this comprehensive walkthrough for the DanaBot Lab!</p>
+                <div class="video">
+                    <iframe src="https://youtube.com/embed/L7jANKLKLzg" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="content">
+                <h3></h3>
+                <p></p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/videoID3" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="content">
+                <h3></h3>
+                <p></p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/videoID4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 M4hm0udX. All Rights Reserved.</p>
+            <p>Connect with me:</p>
+            <div class="social-links">
+                <a href="https://github.com/M4hm0udX" target="_blank" class="social-link github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mahmoudabdulghany1" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.youtube.com/@M4hm0udX" target="_blank" class="social-link youtube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function filterContent() {
+            var input = document.getElementById("search-bar").value.toLowerCase();
+            var boxes = document.getElementsByClassName("box");
+
+            for (var i = 0; i < boxes.length; i++) {
+                var title = boxes[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+                var description = boxes[i].getElementsByTagName("p")[0].textContent.toLowerCase();
+
+                if (title.indexOf(input) > -1 || description.indexOf(input) > -1) {
+                    boxes[i].style.display = "";
+                } else {
+                    boxes[i].style.display = "none";
+                }
+            }
+        }
+    </script>        
+</body>
+</html>
